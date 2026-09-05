@@ -1,22 +1,662 @@
-body {
+/* ==============================
+   RESET
+============================== */
+
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #111;
-    color: #eee;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-header {
-    padding: 40px;
-    text-align: center;
-    background: #1b1b1b;
+
+body {
+
+    font-family:
+        Arial,
+        "Tahoma",
+        sans-serif;
+
+    background:
+        #f4f4f4;
+
+    color:
+        #222;
+
 }
 
-h1 {
-    font-size: 42px;
+
+/* ==============================
+   HEADER
+============================== */
+
+.site-header {
+
+    background:
+        #ffffff;
+
+    border-bottom:
+        1px solid #dddddd;
+
 }
 
-.container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 30px;
+
+.header-inner {
+
+    max-width:
+        1100px;
+
+    margin:
+        auto;
+
+    min-height:
+        150px;
+
+    padding:
+        30px 20px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        30px;
+
+}
+
+
+.logo {
+
+    width:
+        100px;
+
+    height:
+        100px;
+
+    background:
+        #111;
+
+    color:
+        white;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    font-weight:
+        bold;
+
+    line-height:
+        1.05;
+
+}
+
+
+.logo-main {
+
+    font-size:
+        17px;
+
+}
+
+
+.logo-thai {
+
+    font-size:
+        13px;
+
+    color:
+        #cccccc;
+
+}
+
+
+.header-title h1 {
+
+    font-size:
+        34px;
+
+    margin-bottom:
+        7px;
+
+}
+
+
+.header-title p {
+
+    font-size:
+        17px;
+
+    color:
+        #777;
+
+}
+
+
+/* ==============================
+   CONTENT
+============================== */
+
+main {
+
+    max-width:
+        1100px;
+
+    margin:
+        auto;
+
+    padding:
+        50px 20px;
+
+}
+
+
+.section {
+
+    margin-bottom:
+        70px;
+
+}
+
+
+.section-title {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    margin-bottom:
+        25px;
+
+}
+
+
+.section-title h2 {
+
+    font-size:
+        26px;
+
+}
+
+
+.view-all {
+
+    text-decoration:
+        none;
+
+    color:
+        #555;
+
+    font-weight:
+        bold;
+
+}
+
+
+.view-all:hover {
+
+    color:
+        #000;
+
+}
+
+
+/* ==============================
+   GAME GRID
+============================== */
+
+.game-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(auto-fill, minmax(240px, 1fr));
+
+    gap:
+        28px;
+
+}
+
+
+/* ==============================
+   GAME CARD
+============================== */
+
+.game-card {
+
+    background:
+        white;
+
+    border-radius:
+        6px;
+
+    overflow:
+        hidden;
+
+    border:
+        1px solid #ddd;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+.game-card:hover {
+
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(0, 0, 0, 0.12);
+
+}
+
+
+.game-card a {
+
+    text-decoration:
+        none;
+
+    color:
+        inherit;
+
+}
+
+
+.game-image {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    aspect-ratio:
+        16 / 9;
+
+    background:
+        #222;
+
+    overflow:
+        hidden;
+
+}
+
+
+.game-image img {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        cover;
+
+    transition:
+        transform 0.3s ease;
+
+}
+
+
+.game-card:hover
+.game-image img {
+
+    transform:
+        scale(1.04);
+
+}
+
+
+/* ==============================
+   BADGE
+============================== */
+
+.game-status {
+
+    position:
+        absolute;
+
+    bottom:
+        10px;
+
+    left:
+        10px;
+
+    background:
+        rgba(0,0,0,0.8);
+
+    color:
+        white;
+
+    font-size:
+        13px;
+
+    padding:
+        6px 10px;
+
+    border-radius:
+        3px;
+
+}
+
+
+/* ==============================
+   GAME INFO
+============================== */
+
+.game-info {
+
+    padding:
+        18px;
+
+}
+
+
+.game-info h3 {
+
+    font-size:
+        21px;
+
+    margin-bottom:
+        8px;
+
+}
+
+
+.game-info p {
+
+    color:
+        #777;
+
+    font-size:
+        14px;
+
+    line-height:
+        1.6;
+
+}
+
+
+.game-meta {
+
+    display:
+        flex;
+
+    gap:
+        8px;
+
+    margin-top:
+        14px;
+
+}
+
+
+.game-meta span {
+
+    background:
+        #eee;
+
+    padding:
+        5px 8px;
+
+    border-radius:
+        3px;
+
+    font-size:
+        12px;
+
+    color:
+        #555;
+
+}
+
+
+/* ==============================
+   PLACEHOLDER
+============================== */
+
+.placeholder-image {
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    color:
+        #777;
+
+    background:
+        #e3e3e3;
+
+    font-size:
+        14px;
+
+    letter-spacing:
+        2px;
+
+}
+
+
+/* ==============================
+   INFO SECTIONS
+============================== */
+
+.info-section {
+
+    background:
+        white;
+
+    padding:
+        30px;
+
+    margin-bottom:
+        30px;
+
+    border:
+        1px solid #ddd;
+
+}
+
+
+.info-section h2 {
+
+    font-size:
+        23px;
+
+    margin-bottom:
+        18px;
+
+}
+
+
+.info-section p {
+
+    line-height:
+        1.8;
+
+    color:
+        #666;
+
+    margin-bottom:
+        8px;
+
+}
+
+
+.highlight {
+
+    font-size:
+        17px;
+
+    color:
+        #333 !important;
+
+}
+
+
+/* ==============================
+   SOCIAL
+============================== */
+
+.social-links {
+
+    display:
+        flex;
+
+    gap:
+        15px;
+
+    flex-wrap:
+        wrap;
+
+}
+
+
+.social-links a {
+
+    display:
+        inline-block;
+
+    background:
+        #222;
+
+    color:
+        white;
+
+    padding:
+        11px 20px;
+
+    text-decoration:
+        none;
+
+    border-radius:
+        3px;
+
+}
+
+
+.social-links a:hover {
+
+    background:
+        #444;
+
+}
+
+
+/* ==============================
+   FOOTER
+============================== */
+
+footer {
+
+    text-align:
+        center;
+
+    padding:
+        40px 20px;
+
+    background:
+        #222;
+
+    color:
+        #ddd;
+
+}
+
+
+footer p {
+
+    margin:
+        5px;
+
+}
+
+
+.copyright {
+
+    color:
+        #777;
+
+    font-size:
+        13px;
+
+}
+
+
+/* ==============================
+   MOBILE
+============================== */
+
+@media
+(max-width: 600px) {
+
+    .header-inner {
+
+        flex-direction:
+            column;
+
+        text-align:
+            center;
+
+        padding:
+            30px 20px;
+
+    }
+
+
+    .header-title h1 {
+
+        font-size:
+            27px;
+
+    }
+
+
+    main {
+
+        padding:
+            30px 15px;
+
+    }
+
+
+    .game-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .info-section {
+
+        padding:
+            22px;
+
+    }
+
 }
