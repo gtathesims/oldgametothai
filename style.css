@@ -1209,17 +1209,26 @@ footer p {
         box-shadow 0.2s ease;
 }
 
+.screenshot-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
 .screenshot-item {
     width: 100%;
-    max-width: 500px;
-    aspect-ratio: 16 / 9;
     overflow: hidden;
-    margin: 0 auto;
 }
 
 .screenshot-item img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    max-width: 100%;
+    height: auto;
     display: block;
+}
+
+@media (max-width: 800px) {
+    .screenshot-grid {
+        grid-template-columns: 1fr;
+    }
 }
