@@ -732,3 +732,467 @@ footer p {
         transform: translateY(16px);
     }
 }
+
+
+/* =========================================
+   GAME DETAIL PAGE
+========================================= */
+
+.game-page {
+    max-width: 1100px;
+    margin: auto;
+    padding: 25px 20px 70px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 22px;
+
+    color: var(--cyan);
+    text-decoration: none;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 14px;
+}
+
+.back-link:hover {
+    color: white;
+    text-shadow:
+        0 0 8px rgba(109, 247, 255, 0.7);
+}
+
+
+/* HERO */
+
+.game-hero {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(34, 17, 65, 0.96),
+            rgba(19, 11, 42, 0.94)
+        );
+
+    border:
+        1px solid rgba(255, 79, 216, 0.35);
+
+    box-shadow:
+        0 0 25px rgba(255, 62, 165, 0.16),
+        0 0 0 1px rgba(41, 211, 255, 0.08) inset;
+
+    overflow: hidden;
+
+    margin-bottom: 30px;
+}
+
+
+.game-hero-image {
+    position: relative;
+    min-height: 360px;
+
+    background: #120922;
+}
+
+
+.game-hero-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    filter:
+        contrast(1.05)
+        saturate(1.06);
+
+    transition:
+        transform 0.4s ease,
+        filter 0.4s ease;
+}
+
+
+.game-hero:hover .game-hero-image img {
+    transform: scale(1.025);
+
+    filter:
+        contrast(1.08)
+        saturate(1.12)
+        brightness(1.03);
+}
+
+
+.game-hero-info {
+    padding: 38px 32px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.game-small-title {
+    margin-bottom: 8px;
+
+    color: var(--hotpink);
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+.game-hero-info h1 {
+    margin-bottom: 8px;
+
+    color: #fff4fb;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 48px;
+
+    text-shadow:
+        3px 3px 0 rgba(255, 62, 165, 0.28),
+        0 0 15px rgba(41, 211, 255, 0.16);
+}
+
+
+.game-subtitle {
+    margin-bottom: 27px;
+
+    color: #e7c9ee;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+
+/* DETAILS */
+
+.game-details {
+    margin-bottom: 28px;
+
+    border-top:
+        1px solid rgba(255,255,255,0.08);
+}
+
+
+.detail-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 11px 0;
+
+    border-bottom:
+        1px solid rgba(255,255,255,0.08);
+
+    color: #d3b8dd;
+}
+
+
+.detail-row span {
+    font-size: 14px;
+}
+
+
+.detail-row strong {
+    color: #fff2c2;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 13px;
+}
+
+
+/* DOWNLOAD BUTTON */
+
+.download-button {
+    display: inline-block;
+
+    align-self: flex-start;
+
+    padding: 14px 21px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--pink),
+            #ff765f
+        );
+
+    color: white;
+
+    border:
+        1px solid rgba(255, 220, 120, 0.75);
+
+    box-shadow:
+        0 0 15px rgba(255, 62, 165, 0.3);
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.18s ease,
+        box-shadow 0.18s ease,
+        filter 0.18s ease;
+}
+
+
+.download-button:hover {
+    transform: translateY(-2px) scale(1.02);
+
+    filter: brightness(1.08);
+
+    box-shadow:
+        0 0 20px rgba(255, 62, 165, 0.5),
+        0 0 35px rgba(255, 155, 84, 0.18);
+}
+
+
+.download-button:active {
+    transform: scale(0.98);
+}
+
+
+/* CONTENT PANELS */
+
+.content-panel {
+    margin-top: 25px;
+
+    padding: 27px;
+
+    background:
+        rgba(27, 14, 55, 0.9);
+
+    border:
+        1px solid rgba(140, 82, 255, 0.28);
+
+    box-shadow:
+        0 0 20px rgba(140, 82, 255, 0.1),
+        0 0 0 1px rgba(41, 211, 255, 0.06) inset;
+
+    backdrop-filter: blur(5px);
+}
+
+
+.content-panel h2 {
+    margin-bottom: 18px;
+
+    padding-bottom: 11px;
+
+    color: #fff1fb;
+
+    border-bottom:
+        1px solid rgba(255, 216, 107, 0.22);
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 21px;
+
+    text-shadow:
+        0 0 8px rgba(255, 79, 216, 0.22);
+}
+
+
+.content-panel p {
+    margin-bottom: 10px;
+
+    color: #e1c9e9;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+}
+
+
+/* FEATURES */
+
+.feature-list {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+}
+
+
+.feature-item {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 12px 14px;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+    border:
+        1px solid rgba(41, 211, 255, 0.13);
+
+    color: #e6d9ef;
+}
+
+
+.feature-icon {
+    color: #7affd7;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-weight: bold;
+}
+
+
+/* INSTALL */
+
+.install-list {
+    padding-left: 25px;
+
+    color: #e1c9e9;
+}
+
+
+.install-list li {
+    padding-left: 6px;
+
+    margin-bottom: 12px;
+
+    line-height: 1.7;
+}
+
+
+.install-list li::marker {
+    color: var(--hotpink);
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-weight: bold;
+}
+
+
+/* SCREENSHOTS */
+
+.screenshot-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 15px;
+}
+
+
+.screenshot-placeholder {
+    aspect-ratio: 16 / 9;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 62, 165, 0.16),
+            rgba(140, 82, 255, 0.18),
+            rgba(41, 211, 255, 0.13)
+        );
+
+    border:
+        1px solid rgba(255, 79, 216, 0.22);
+
+    color: #ceaad9;
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.screenshot-placeholder:hover {
+    transform:
+        translateY(-3px);
+
+    border-color:
+        rgba(109, 247, 255, 0.45);
+
+    box-shadow:
+        0 0 18px rgba(41, 211, 255, 0.12);
+}
+
+
+/* =========================================
+   GAME PAGE MOBILE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .game-hero {
+        grid-template-columns: 1fr;
+    }
+
+
+    .game-hero-image {
+        min-height: 250px;
+    }
+
+
+    .game-hero-info {
+        padding: 27px 22px;
+    }
+
+
+    .game-hero-info h1 {
+        font-size: 36px;
+    }
+
+
+    .feature-list {
+        grid-template-columns: 1fr;
+    }
+
+
+    .screenshot-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
