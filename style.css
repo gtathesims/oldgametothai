@@ -156,6 +156,13 @@ main::before {
     position: relative;
 }
 
+.site-header,
+main,
+footer {
+    position: relative;
+    z-index: 2;
+}
+
 .header-inner {
     max-width: 1100px;
     margin: auto;
@@ -579,5 +586,149 @@ footer p {
 
     .info-section {
         padding: 20px;
+    }
+}
+
+/* =========================================
+   EXTRA BACKGROUND FX
+========================================= */
+
+.bg-stars,
+.bg-glow,
+.bg-scanlines {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+}
+
+
+/* ดาวชั้นแรก */
+
+.bg-stars {
+    z-index: 0;
+    opacity: 0.8;
+    background-image:
+        radial-gradient(circle at 8% 12%, rgba(255,255,255,0.95) 0 1px, transparent 2px),
+        radial-gradient(circle at 18% 32%, rgba(255,230,160,0.95) 0 1.5px, transparent 3px),
+        radial-gradient(circle at 28% 18%, rgba(120,220,255,0.95) 0 1.5px, transparent 3px),
+        radial-gradient(circle at 35% 42%, rgba(255,255,255,0.9) 0 1px, transparent 2px),
+        radial-gradient(circle at 48% 10%, rgba(255,120,210,0.9) 0 1.5px, transparent 3px),
+        radial-gradient(circle at 58% 28%, rgba(255,255,255,0.95) 0 1px, transparent 2px),
+        radial-gradient(circle at 68% 16%, rgba(255,226,130,0.95) 0 2px, transparent 4px),
+        radial-gradient(circle at 76% 36%, rgba(255,255,255,0.9) 0 1px, transparent 2px),
+        radial-gradient(circle at 88% 14%, rgba(255,120,210,0.9) 0 2px, transparent 4px),
+        radial-gradient(circle at 92% 30%, rgba(120,220,255,0.95) 0 1px, transparent 2px),
+        radial-gradient(circle at 12% 58%, rgba(255,255,255,0.9) 0 1px, transparent 2px),
+        radial-gradient(circle at 24% 64%, rgba(255,120,210,0.9) 0 1.5px, transparent 3px),
+        radial-gradient(circle at 42% 56%, rgba(255,255,255,0.95) 0 1px, transparent 2px),
+        radial-gradient(circle at 63% 62%, rgba(255,226,130,0.95) 0 1.5px, transparent 3px),
+        radial-gradient(circle at 82% 54%, rgba(255,255,255,0.9) 0 1px, transparent 2px);
+    animation: starsTwinkle 4s ease-in-out infinite alternate;
+}
+
+
+/* ดาวชั้นสอง ขยับช้ากว่า */
+
+.bg-stars-2 {
+    z-index: 0;
+    opacity: 0.45;
+    transform: scale(1.02);
+    background-image:
+        radial-gradient(circle at 14% 20%, rgba(255,255,255,0.8) 0 1px, transparent 2px),
+        radial-gradient(circle at 30% 8%, rgba(255,210,120,0.8) 0 1.5px, transparent 3px),
+        radial-gradient(circle at 52% 24%, rgba(120,220,255,0.8) 0 1px, transparent 2px),
+        radial-gradient(circle at 72% 12%, rgba(255,255,255,0.8) 0 1px, transparent 2px),
+        radial-gradient(circle at 86% 26%, rgba(255,120,210,0.75) 0 1.5px, transparent 3px),
+        radial-gradient(circle at 10% 46%, rgba(255,255,255,0.8) 0 1px, transparent 2px),
+        radial-gradient(circle at 37% 40%, rgba(255,226,130,0.8) 0 1.5px, transparent 3px),
+        radial-gradient(circle at 61% 44%, rgba(255,255,255,0.75) 0 1px, transparent 2px),
+        radial-gradient(circle at 79% 48%, rgba(120,220,255,0.75) 0 1.5px, transparent 3px);
+    animation:
+        starsTwinkle 6s ease-in-out infinite alternate,
+        starsDrift 18s linear infinite;
+}
+
+
+/* Glow ลอย ๆ ด้านหลัง */
+
+.bg-glow {
+    z-index: 0;
+    background:
+        radial-gradient(circle at 20% 18%, rgba(41, 211, 255, 0.14), transparent 22%),
+        radial-gradient(circle at 80% 22%, rgba(255, 62, 165, 0.14), transparent 24%),
+        radial-gradient(circle at 50% 70%, rgba(140, 82, 255, 0.12), transparent 28%);
+    animation: glowPulse 8s ease-in-out infinite;
+}
+
+
+/* scanline ขยับช้า ๆ */
+
+.bg-scanlines {
+    z-index: 1;
+    opacity: 0.14;
+    background:
+        repeating-linear-gradient(
+            to bottom,
+            rgba(255,255,255,0.12) 0px,
+            rgba(255,255,255,0.12) 1px,
+            transparent 1px,
+            transparent 4px
+        );
+    animation: scanMove 10s linear infinite;
+}
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes starsTwinkle {
+    0% {
+        opacity: 0.45;
+        filter: brightness(0.9);
+    }
+    50% {
+        opacity: 0.9;
+        filter: brightness(1.1);
+    }
+    100% {
+        opacity: 0.6;
+        filter: brightness(1);
+    }
+}
+
+@keyframes starsDrift {
+    0% {
+        transform: translateY(0px) scale(1.02);
+    }
+    50% {
+        transform: translateY(6px) scale(1.025);
+    }
+    100% {
+        transform: translateY(0px) scale(1.02);
+    }
+}
+
+@keyframes glowPulse {
+    0% {
+        opacity: 0.7;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.03);
+    }
+    100% {
+        opacity: 0.75;
+        transform: scale(1);
+    }
+}
+
+@keyframes scanMove {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(16px);
     }
 }
