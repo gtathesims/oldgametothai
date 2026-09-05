@@ -1232,3 +1232,132 @@ footer p {
         grid-template-columns: 1fr;
     }
 }
+
+/* =========================================
+   SCREENSHOT LIGHTBOX
+========================================= */
+
+.zoomable-image {
+    cursor: zoom-in;
+}
+
+
+/* กล่องเต็มหน้าจอ */
+
+.lightbox {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 10000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    background:
+        rgba(8, 3, 20, 0.94);
+
+    backdrop-filter:
+        blur(8px);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease;
+}
+
+
+/* ตอนเปิด */
+
+.lightbox.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* ภาพใหญ่ */
+
+.lightbox-image {
+    display: block;
+
+    max-width: 92vw;
+    max-height: 88vh;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+
+    border:
+        1px solid rgba(255, 79, 216, 0.6);
+
+    box-shadow:
+        0 0 25px rgba(255, 62, 165, 0.35),
+        0 0 50px rgba(41, 211, 255, 0.18);
+
+    transform:
+        scale(0.92);
+
+    transition:
+        transform 0.25s ease;
+}
+
+
+.lightbox.active .lightbox-image {
+    transform:
+        scale(1);
+}
+
+
+/* ปุ่ม X */
+
+.lightbox-close {
+    position: absolute;
+
+    top: 20px;
+    right: 25px;
+
+    width: 48px;
+    height: 48px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.4);
+
+    background:
+        rgba(20, 8, 40, 0.8);
+
+    color:
+        white;
+
+    font-size:
+        34px;
+
+    line-height:
+        40px;
+
+    cursor:
+        pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.lightbox-close:hover {
+    background:
+        #ff3ea5;
+
+    color:
+        white;
+
+    transform:
+        scale(1.08);
+}
