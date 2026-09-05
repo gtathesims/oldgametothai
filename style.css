@@ -1,7 +1,30 @@
 /* =========================================
    OLD GAME TO THAI
-   90s PC GAME WEBSITE STYLE
+   SYNTHWAVE / RETRO 90s THEME
 ========================================= */
+
+:root {
+    --bg-top: #120b2e;
+    --bg-mid: #3a145a;
+    --bg-bottom: #ff2f92;
+
+    --panel: rgba(22, 14, 46, 0.82);
+    --panel-2: rgba(37, 18, 68, 0.9);
+
+    --text-main: #ffe8f5;
+    --text-soft: #d9b9e7;
+
+    --pink: #ff3ea5;
+    --hotpink: #ff4fd8;
+    --purple: #8c52ff;
+    --blue: #29d3ff;
+    --cyan: #6df7ff;
+    --orange: #ff9b54;
+    --yellow: #ffd86b;
+}
+
+
+/* RESET */
 
 * {
     margin: 0;
@@ -10,741 +33,551 @@
 }
 
 
-body {
+/* BODY */
 
+body {
     font-family:
         "Trebuchet MS",
         Tahoma,
         Arial,
         sans-serif;
 
+    color: var(--text-main);
+
+    min-height: 100vh;
+
     background:
-        #080c10;
-
-    color:
-        #d6ded8;
-
-    background-image:
         linear-gradient(
-            rgba(255,255,255,0.015) 1px,
+            to bottom,
+            #0e0820 0%,
+            #1a0f38 18%,
+            #361357 40%,
+            #7f1f75 65%,
+            #ff2d8f 100%
+        );
+
+    position: relative;
+    overflow-x: hidden;
+}
+
+
+/* ฉากหลังแนวพระอาทิตย์ย้อนยุค */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -2;
+
+    background:
+        radial-gradient(
+            circle at 50% 33%,
+            rgba(255, 210, 120, 0.95) 0 90px,
+            rgba(255, 147, 103, 0.9) 90px 150px,
+            rgba(255, 78, 154, 0.75) 150px 220px,
+            transparent 220px
+        ),
+        linear-gradient(
+            to bottom,
+            transparent 0%,
+            transparent 57%,
+            rgba(12, 4, 28, 0.35) 57%,
+            rgba(12, 4, 28, 0.35) 60%,
+            transparent 60%,
+            transparent 100%
+        );
+}
+
+
+/* กริดพื้นล่างแบบ synthwave */
+
+body::after {
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 40vh;
+    pointer-events: none;
+    z-index: -1;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(8, 0, 22, 0.95),
+            rgba(8, 0, 22, 0.45) 55%,
+            transparent 100%
+        );
+
+    clip-path: polygon(0 100%, 100% 100%, 100% 35%, 0 35%);
+}
+
+html {
+    background: #0e0820;
+}
+
+
+/* สร้างเส้นกริดด้วย overlay */
+
+main::before {
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 35vh;
+    pointer-events: none;
+    z-index: -1;
+
+    background:
+        linear-gradient(
+            rgba(255, 72, 171, 0.75) 1px,
             transparent 1px
         ),
         linear-gradient(
             90deg,
-            rgba(255,255,255,0.015) 1px,
+            rgba(70, 226, 255, 0.7) 1px,
             transparent 1px
         );
 
-    background-size:
-        4px 4px;
-
+    background-size: 100% 34px, 34px 100%;
+    transform: perspective(420px) rotateX(72deg);
+    transform-origin: bottom;
+    opacity: 0.35;
 }
 
 
-/* =========================================
-   HEADER
-========================================= */
+/* HEADER */
 
 .site-header {
-
-    background:
-        #10181b;
-
-    border-top:
-        4px solid #758f7d;
-
-    border-bottom:
-        4px solid #263a3d;
-
-    box-shadow:
-        0 5px 20px rgba(0,0,0,0.7);
-
+    padding: 40px 20px 25px;
+    text-align: center;
+    position: relative;
 }
 
-
 .header-inner {
-
-    max-width:
-        1100px;
-
-    margin:
-        auto;
-
-    padding:
-        35px 20px 28px;
-
-    text-align:
-        center;
-
+    max-width: 1100px;
+    margin: auto;
 }
 
 
 /* LOGO */
 
 .main-logo {
-
-    display:
-        block;
-
-    width:
-        min(760px, 100%);
-
-    max-height:
-        300px;
-
-    object-fit:
-        contain;
-
-    margin:
-        0 auto;
-
-    border:
-        2px solid #526b60;
-
-    box-shadow:
-        0 0 0 4px #090d0f,
-        0 0 0 6px #293b36,
-        0 8px 25px rgba(0,0,0,0.7);
-
-}
-
-
-/* TAGLINE */
-
-.tagline {
-
-    margin-top:
-        22px;
-
-    font-size:
-        21px;
-
-    font-weight:
-        bold;
-
-    letter-spacing:
-        1px;
-
-    color:
-        #c9d7c9;
-
-    text-shadow:
-        2px 2px 0 #000;
-
-}
-
-
-/* =========================================
-   MAIN
-========================================= */
-
-main {
-
-    max-width:
-        1100px;
-
-    margin:
-        auto;
-
-    padding:
-        45px 20px;
-
-}
-
-
-.section {
-
-    margin-bottom:
-        60px;
-
-}
-
-
-/* =========================================
-   SECTION TITLE
-========================================= */
-
-.section-title {
-
-    display:
-        flex;
-
-    justify-content:
-        space-between;
-
-    align-items:
-        center;
-
-    margin-bottom:
-        22px;
-
-    padding:
-        11px 14px;
-
-    background:
-        #172125;
-
-    border:
-        1px solid #45605a;
-
-    border-left:
-        6px solid #819979;
-
-    box-shadow:
-        inset 0 0 0 1px #080d0f;
-
-}
-
-
-.section-title h2 {
-
-    font-family:
-        "Courier New",
-        monospace;
-
-    font-size:
-        23px;
-
-    color:
-        #dce6ce;
-
-    text-transform:
-        uppercase;
-
-    letter-spacing:
-        1px;
-
-}
-
-
-.view-all {
-
-    color:
-        #9fb49c;
-
-    text-decoration:
-        none;
-
-    font-size:
-        14px;
-
-}
-
-
-.view-all:hover {
-
-    color:
-        #e1e8d2;
-
-    text-decoration:
-        underline;
-
-}
-
-
-/* =========================================
-   GAME GRID
-========================================= */
-
-.game-grid {
-
-    display:
-        grid;
-
-    grid-template-columns:
-        repeat(auto-fill, minmax(260px, 1fr));
-
-    gap:
-        24px;
-
-}
-
-
-/* =========================================
-   GAME CARD
-========================================= */
-
-.game-card {
-
-    background:
-        #141b1e;
-
-    border:
-        2px solid #314744;
-
-    box-shadow:
-        4px 4px 0 #050708;
-
-    overflow:
-        hidden;
+    display: block;
+    width: min(760px, 100%);
+    max-height: 320px;
+    object-fit: contain;
+    margin: 0 auto;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+
+    filter:
+        drop-shadow(0 0 8px rgba(255, 62, 165, 0.55))
+        drop-shadow(0 0 18px rgba(41, 211, 255, 0.25));
 
     transition:
-        transform 0.15s ease,
-        border-color 0.15s ease;
+        transform 0.25s ease,
+        filter 0.25s ease;
 
+    animation: logoFloat 3.2s ease-in-out infinite;
 }
 
+.main-logo:hover {
+    transform: scale(1.05) translateY(-2px);
+    filter:
+        drop-shadow(0 0 12px rgba(255, 62, 165, 0.8))
+        drop-shadow(0 0 28px rgba(41, 211, 255, 0.45))
+        brightness(1.05) saturate(1.08);
+}
+
+.main-logo:active {
+    transform: scale(0.98);
+}
+
+.tagline {
+    margin-top: 22px;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #fff1b8;
+    text-shadow:
+        0 0 6px rgba(255, 216, 107, 0.55),
+        0 0 12px rgba(255, 62, 165, 0.35),
+        2px 2px 0 rgba(35, 10, 58, 0.9);
+}
+
+
+/* MAIN */
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 20px 60px;
+    position: relative;
+    z-index: 1;
+}
+
+.section {
+    margin-bottom: 55px;
+}
+
+
+/* SECTION TITLE */
+
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 22px;
+
+    padding: 14px 16px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255, 62, 165, 0.2),
+            rgba(140, 82, 255, 0.16),
+            rgba(41, 211, 255, 0.18)
+        );
+
+    border: 1px solid rgba(255, 115, 194, 0.5);
+
+    box-shadow:
+        0 0 0 1px rgba(41, 211, 255, 0.14) inset,
+        0 0 20px rgba(255, 62, 165, 0.14);
+}
+
+.section-title h2 {
+    font-family:
+        "Courier New",
+        monospace;
+    font-size: 24px;
+    color: #fff0fb;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 0 8px rgba(255, 79, 216, 0.3);
+}
+
+.view-all {
+    color: var(--cyan);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.view-all:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+
+/* GAME GRID */
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 24px;
+}
+
+
+/* GAME CARD */
+
+.game-card {
+    background: var(--panel);
+    border: 1px solid rgba(120, 102, 255, 0.35);
+
+    box-shadow:
+        0 0 18px rgba(255, 62, 165, 0.12),
+        0 0 0 1px rgba(41, 211, 255, 0.08) inset;
+
+    backdrop-filter: blur(4px);
+    overflow: hidden;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
 
 .game-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 216, 107, 0.65);
 
-    transform:
-        translateY(-3px);
-
-    border-color:
-        #7d9477;
-
+    box-shadow:
+        0 0 24px rgba(255, 62, 165, 0.22),
+        0 0 36px rgba(41, 211, 255, 0.14),
+        0 0 0 1px rgba(255, 216, 107, 0.15) inset;
 }
-
 
 .game-card a {
-
-    color:
-        inherit;
-
-    text-decoration:
-        none;
-
+    color: inherit;
+    text-decoration: none;
 }
 
 
-/* =========================================
-   GAME IMAGE
-========================================= */
+/* GAME IMAGE */
 
 .game-image {
-
-    position:
-        relative;
-
-    width:
-        100%;
-
-    aspect-ratio:
-        16 / 9;
-
-    overflow:
-        hidden;
-
-    background:
-        #050708;
-
-    border-bottom:
-        2px solid #314744;
-
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #140a2f;
+    border-bottom: 1px solid rgba(255, 79, 216, 0.28);
 }
-
 
 .game-image img {
-
-    width:
-        100%;
-
-    height:
-        100%;
-
-    object-fit:
-        cover;
-
-    display:
-        block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 
     filter:
-        saturate(0.85)
-        contrast(1.08);
+        saturate(1.02)
+        contrast(1.04);
 
+    transition:
+        transform 0.3s ease,
+        filter 0.3s ease;
+}
+
+.game-card:hover .game-image img {
+    transform: scale(1.04);
+    filter:
+        saturate(1.08)
+        contrast(1.08)
+        brightness(1.03);
 }
 
 
-.game-card:hover
-.game-image img {
-
-    filter:
-        saturate(1)
-        contrast(1.08);
-
-}
-
-
-/* =========================================
-   PATCH BADGE
-========================================= */
+/* BADGE */
 
 .game-status {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
 
-    position:
-        absolute;
-
-    left:
-        10px;
-
-    bottom:
-        10px;
-
-    padding:
-        6px 9px;
+    padding: 7px 10px;
 
     background:
-        #101716;
+        linear-gradient(
+            90deg,
+            rgba(255, 62, 165, 0.92),
+            rgba(255, 155, 84, 0.92)
+        );
 
-    border:
-        1px solid #9ab18b;
-
-    color:
-        #cde0bd;
+    color: #fffafc;
 
     font-family:
         "Courier New",
         monospace;
-
-    font-size:
-        12px;
-
-    font-weight:
-        bold;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
 
     box-shadow:
-        2px 2px 0 #000;
-
+        0 0 10px rgba(255, 62, 165, 0.35);
 }
 
 
-/* =========================================
-   GAME INFO
-========================================= */
+/* GAME INFO */
 
 .game-info {
-
-    padding:
-        17px;
-
+    padding: 18px;
 }
-
 
 .game-info h3 {
+    margin-bottom: 8px;
 
-    margin-bottom:
-        8px;
-
-    color:
-        #e4eadc;
+    color: #fff2fb;
 
     font-family:
         "Courier New",
         monospace;
+    font-size: 21px;
 
-    font-size:
-        21px;
-
+    text-shadow: 0 0 8px rgba(140, 82, 255, 0.18);
 }
-
 
 .game-info p {
-
-    color:
-        #9ba8a1;
-
-    font-size:
-        14px;
-
-    line-height:
-        1.7;
-
+    color: var(--text-soft);
+    font-size: 14px;
+    line-height: 1.7;
 }
-
 
 .game-meta {
-
-    display:
-        flex;
-
-    gap:
-        7px;
-
-    margin-top:
-        15px;
-
+    display: flex;
+    gap: 8px;
+    margin-top: 15px;
+    flex-wrap: wrap;
 }
-
 
 .game-meta span {
-
-    padding:
-        5px 8px;
+    padding: 5px 9px;
 
     background:
-        #202c2d;
+        linear-gradient(
+            90deg,
+            rgba(50, 29, 88, 0.95),
+            rgba(34, 24, 72, 0.95)
+        );
 
-    border:
-        1px solid #405652;
+    border: 1px solid rgba(41, 211, 255, 0.24);
 
-    color:
-        #aebdb3;
+    color: #d5fbff;
 
     font-family:
         "Courier New",
         monospace;
-
-    font-size:
-        11px;
-
+    font-size: 11px;
 }
 
 
-/* =========================================
-   PLACEHOLDER
-========================================= */
+/* PLACEHOLDER */
 
 .placeholder-image {
-
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    justify-content:
-        center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     background:
-        repeating-linear-gradient(
-            45deg,
-            #11191b,
-            #11191b 10px,
-            #151f21 10px,
-            #151f21 20px
+        linear-gradient(
+            135deg,
+            rgba(255, 62, 165, 0.25),
+            rgba(140, 82, 255, 0.25),
+            rgba(41, 211, 255, 0.2)
         );
 
-    color:
-        #64756c;
+    color: #ffe694;
 
     font-family:
         "Courier New",
         monospace;
-
-    font-size:
-        14px;
-
-    letter-spacing:
-        2px;
-
+    font-size: 14px;
+    letter-spacing: 2px;
 }
 
 
-/* =========================================
-   ABOUT
-========================================= */
+/* INFO SECTION */
 
 .info-section {
+    margin-top: 45px;
+    padding: 26px;
 
-    margin-top:
-        45px;
+    background: var(--panel-2);
 
-    padding:
-        25px;
-
-    background:
-        #11191c;
-
-    border:
-        1px solid #354b46;
+    border: 1px solid rgba(255, 79, 216, 0.28);
 
     box-shadow:
-        4px 4px 0 #050708;
+        0 0 20px rgba(140, 82, 255, 0.12),
+        0 0 0 1px rgba(41, 211, 255, 0.08) inset;
 
+    backdrop-filter: blur(5px);
 }
-
 
 .info-section h2 {
+    margin-bottom: 16px;
 
-    margin-bottom:
-        16px;
-
-    color:
-        #dbe5d2;
+    color: #fff1fb;
 
     font-family:
         "Courier New",
         monospace;
+    font-size: 21px;
 
-    font-size:
-        21px;
+    border-bottom: 1px solid rgba(255, 216, 107, 0.25);
+    padding-bottom: 10px;
 
-    border-bottom:
-        1px dashed #4a625b;
-
-    padding-bottom:
-        10px;
-
+    text-shadow: 0 0 8px rgba(255, 79, 216, 0.24);
 }
-
 
 .info-section p {
-
-    color:
-        #a5b0aa;
-
-    line-height:
-        1.9;
-
-    margin-bottom:
-        7px;
-
+    color: #ead0f4;
+    line-height: 1.9;
+    margin-bottom: 8px;
 }
 
 
-/* =========================================
-   FOOTER
-========================================= */
+/* FOOTER */
 
 footer {
-
-    margin-top:
-        20px;
-
-    padding:
-        30px 20px;
-
-    text-align:
-        center;
+    margin-top: 20px;
+    padding: 30px 20px;
+    text-align: center;
 
     background:
-        #080d0f;
+        linear-gradient(
+            to top,
+            rgba(8, 4, 22, 0.95),
+            rgba(18, 9, 41, 0.92)
+        );
 
-    border-top:
-        2px solid #263936;
+    border-top: 1px solid rgba(255, 79, 216, 0.25);
 
-    color:
-        #75857d;
+    color: #d7b8e7;
 
     font-family:
         "Courier New",
         monospace;
-
 }
-
 
 footer p {
-
-    margin:
-        5px;
-
+    margin: 5px;
 }
-
 
 .copyright {
-
-    font-size:
-        12px;
-
-    color:
-        #4d5c56;
-
+    font-size: 12px;
+    color: #9b78b0;
 }
 
 
-/* =========================================
-   OLD MONITOR EFFECT
-========================================= */
+/* LOGO ANIMATION */
 
-body::after {
-
-    content:
-        "";
-
-    position:
-        fixed;
-
-    inset:
-        0;
-
-    pointer-events:
-        none;
-
-    background:
-        repeating-linear-gradient(
-            0deg,
-            rgba(0,0,0,0.05),
-            rgba(0,0,0,0.05) 1px,
-            transparent 1px,
-            transparent 3px
-        );
-
-    z-index:
-        9999;
-
+@keyframes logoFloat {
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(-5px); }
+    100% { transform: translateY(0px); }
 }
 
 
-/* =========================================
-   MOBILE
-========================================= */
+/* MOBILE */
 
 @media (max-width: 650px) {
-
-    .header-inner {
-
-        padding:
-            22px 15px;
-
+    .site-header {
+        padding: 28px 15px 20px;
     }
-
 
     .main-logo {
-
-        max-height:
-            220px;
-
+        max-height: 220px;
     }
-
 
     .tagline {
-
-        font-size:
-            17px;
-
+        font-size: 18px;
+        line-height: 1.5;
     }
-
 
     main {
-
-        padding:
-            30px 14px;
-
+        padding: 25px 14px 50px;
     }
-
 
     .section-title {
-
-        align-items:
-            flex-start;
-
-        gap:
-            10px;
-
+        align-items: flex-start;
+        flex-direction: column;
     }
-
 
     .section-title h2 {
-
-        font-size:
-            19px;
-
+        font-size: 20px;
     }
-
 
     .game-grid {
-
-        grid-template-columns:
-            1fr;
-
+        grid-template-columns: 1fr;
     }
-
 
     .info-section {
-
-        padding:
-            20px;
-
+        padding: 20px;
     }
-
 }
