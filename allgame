@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Old Game to Thai</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="bg-stars"></div>
+<div class="bg-stars bg-stars-2"></div>
+<div class="bg-glow"></div>
+<div class="bg-scanlines"></div>
+    
+<header class="site-header">
+
+    <div class="header-inner">
+
+        <img
+            src="images/logogame.png"
+            alt="Old Game to Thai"
+            class="main-logo"
+        >
+
+        <p class="tagline">
+            แปลเกมเก่าให้เป็นภาษาไทย
+        </p>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <section class="section">
+
+        <div class="section-title">
+
+            <h2>เกมแปลไทย</h2>
+
+            <a href="#" class="view-all">
+                ดูทั้งหมด
+            </a>
+
+        </div>
+
+
+        <div class="game-grid">
+
+
+            <!-- OBSCURE -->
+
+            <article class="game-card">
+
+                <a href="games/obscure.html">
+
+                    <div class="game-image">
+
+                        <img
+                            src="images/ob1/ob1.jpg"
+                            alt="Obscure ภาษาไทย"
+                        >
+
+                        <div class="game-status">
+                            พร้อมใช้งาน
+                        </div>
+
+                    </div>
+
+
+                    <div class="game-info">
+
+                        <h3>Obscure</h3>
+
+                        <p>
+                            ม็อดภาษาไทยสำหรับ Obscure
+                        </p>
+
+                        <div class="game-meta">
+
+                            <span>PC</span>
+
+                            <span>ภาษาไทย</span>
+
+                        </div>
+
+                    </div>
+
+                </a>
+
+            </article>
+
+
+            <!-- OBSCURE2 -->
+
+            <article class="game-card">
+
+                <a href="games/obscure2.html">
+
+                    <div class="game-image">
+
+                        <img
+                            src="images/ob2/ob2cover.jpg"
+                            alt="Obscure2 ภาษาไทย"
+                        >
+
+                        <div class="game-status">
+                            พร้อมใช้งาน
+                        </div>
+
+                    </div>
+
+
+                    <div class="game-info">
+
+                        <h3>Obscure</h3>
+
+                        <p>
+                            ม็อดภาษาไทยสำหรับ Obscure2
+                        </p>
+
+                        <div class="game-meta">
+
+                            <span>PC</span>
+
+                            <span>ภาษาไทย</span>
+
+                        </div>
+
+                    </div>
+
+                </a>
+
+            </article>
+            
+
+
+            <!-- เกมถัดไป -->
+
+            <article class="game-card placeholder-card">
+
+                <div class="game-image placeholder-image">
+
+                    <span>COMING SOON</span>
+
+                </div>
+
+                <div class="game-info">
+
+                    <h3>เกมถัดไป</h3>
+
+                    <p>
+                        ม็อดภาษาไทยกำลังอยู่ระหว่างการพัฒนา
+                    </p>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+
+    <section class="info-section">
+
+        <h2>เกี่ยวกับโปรเจกต์</h2>
+
+        <p>
+            Old Game to Thai เป็นโปรเจคแปลเกมเก่าๆให้เป็นภาษาไทย และแบ่งปันให้ได้เล่นกันครับ
+        </p>
+
+        <p>
+            เกมส่วนใหญ่ที่แปลจะเน้นไปทางเกมเก่าในอดีต มากกว่าเกมปัจจุบัน เป็นเกมที่ผมชื่นชอบและอยากแบ่งปัน
+            ซึ่งการแปลของผมจะอาศัย AI เป็นผู้ช่วยหลัก บางเกมผมอาจจะทดสอบหาข้อผิดพลาดได้ไม่หมด
+            ถ้าใครเจอปัญหาเกมบัค เกมค้าง ติดตั้งม็อดไม่ได้ ต้องข้ออภัยด้วย
+        </p>
+
+    </section>
+
+</main>
+
+
+
+<footer>
+
+    <p>
+        OLD GAME TO THAI
+    </p>
+
+    <p class="copyright">
+        แปลเกมเก่าให้เป็นภาษาไทย
+    </p>
+
+</footer>
+
+
+</body>
+</html>
