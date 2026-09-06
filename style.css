@@ -1361,3 +1361,8 @@ footer p {
     transform:
         scale(1.08);
 }
+
+/* หน้าแรกแสดงเฉพาะ 6 เกมแรก */
+.game-grid .game-card:nth-child(n+7) {
+    display: none;
+}
