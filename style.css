@@ -1366,3 +1366,64 @@ footer p {
 .game-grid .game-card:nth-child(n+7) {
     display: none;
 }
+
+/* =========================================
+   FACEBOOK BUTTON
+========================================= */
+
+.facebook-section {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.facebook-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 210px;
+    padding: 14px 24px;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    font-family: "Courier New", monospace;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #2457d6,
+            #3478f6
+        );
+
+    border: 1px solid rgba(109, 247, 255, 0.55);
+
+    box-shadow:
+        0 0 12px rgba(52, 120, 246, 0.35),
+        0 0 24px rgba(255, 62, 165, 0.12);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        filter 0.2s ease;
+}
+
+.facebook-button:hover {
+    transform:
+        translateY(-3px)
+        scale(1.03);
+
+    filter:
+        brightness(1.1);
+
+    box-shadow:
+        0 0 18px rgba(52, 120, 246, 0.55),
+        0 0 30px rgba(41, 211, 255, 0.18);
+}
+
+.facebook-button:active {
+    transform: scale(0.98);
+}
