@@ -1371,11 +1371,6 @@ footer p {
    FACEBOOK BUTTON
 ========================================= */
 
-.facebook-section {
-    margin-top: 30px;
-    text-align: center;
-}
-
 .facebook-button {
     display: inline-flex;
     align-items: center;
@@ -1426,4 +1421,28 @@ footer p {
 
 .facebook-button:active {
     transform: scale(0.98);
+}
+
+.site-header {
+    position: relative;
+}
+
+.top-facebook {
+    position: absolute;
+
+    top: 20px;
+    right: 24px;
+
+    z-index: 20;
+}
+
+@media (max-width: 650px) {
+
+    .top-facebook {
+        position: static;
+        margin: 0 auto 20px;
+        display: flex;
+        width: fit-content;
+    }
+
 }
