@@ -15,6 +15,7 @@ let config;
 let discNumber = 1;
 let busy = false;
 let lastProgress = 0;
+let savedBinName;
 const assetBase = new URL('.', import.meta.url);
 
 function disc() { return config.discs.find(item => item.disc === discNumber); }
@@ -30,6 +31,7 @@ function refresh() {
   start.disabled = busy || !source || source.size !== selected.source_size || !('showSaveFilePicker' in window);
   if (!busy) {
     result.hidden = true;
+    savedBinName = undefined;
     if (!('showSaveFilePicker' in window)) show('เบราว์เซอร์นี้ยังไม่รองรับการบันทึกไฟล์ใหญ่โดยตรง กรุณาใช้ Chrome หรือ Edge บนคอมพิวเตอร์');
     else if (source && source.size !== selected.source_size) show('ขนาด BIN ไม่ตรงกับแผ่นที่เลือก ตรวจสอบแผ่นและไฟล์ต้นฉบับ');
     else if (source) show('พร้อมตรวจสอบและลงแพตช์');
@@ -67,6 +69,7 @@ start.addEventListener('click', async () => {
   busy = true;
   start.disabled = true;
   result.hidden = true;
+  savedBinName = undefined;
   let writable;
   try {
     if (handle.name.toLowerCase() === original.name.toLowerCase()) {
@@ -94,6 +97,7 @@ start.addEventListener('click', async () => {
     await applyBps({ source: original, patchStream, output: writable, expected: selected, sourceCrcVerified, onProgress: progress });
     await writable.close();
     writable = undefined;
+    savedBinName = handle.name;
     show('แพตช์สำเร็จ ตรวจสอบข้อมูลผ่าน', 100);
     result.hidden = false;
   } catch (error) {
@@ -106,12 +110,13 @@ start.addEventListener('click', async () => {
 });
 
 cueButton.addEventListener('click', () => {
-  const name = disc().target_bin;
+  const name = savedBinName;
+  if (!name) return;
   const text = `FILE "${name}" BINARY\r\n  TRACK 01 MODE2/2352\r\n    INDEX 01 00:00:00\r\n`;
   const url = URL.createObjectURL(new Blob([text], { type: 'application/octet-stream' }));
   const link = document.createElement('a');
   link.href = url;
-  link.download = name.replace(/\.bin$/i, '.cue');
+  link.download = /\.bin$/i.test(name) ? name.replace(/\.bin$/i, '.cue') : `${name}.cue`;
   link.click();
   setTimeout(() => URL.revokeObjectURL(url), 30000);
 });
