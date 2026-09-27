@@ -1,1 +1,45 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chase the Express — แพตช์ภาษาไทย</title>
+  <link rel="stylesheet" href="./chase-the-express/style.css">
+  <script type="module" src="./chase-the-express/main.js"></script>
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <a class="back" href="../index.html">← Old Game to Thai</a>
+      <p class="eyebrow">PLAYSTATION · THAI PATCH</p>
+      <h1>Chase the Express<br><span>แพตช์ภาษาไทย</span></h1>
+      <p>เลือกไฟล์ BIN ต้นฉบับของแผ่นที่ต้องการ แล้วบันทึกไฟล์ที่แพตช์เสร็จลงเครื่องคุณ</p>
+      <div class="privacy">ไฟล์เกมต้นฉบับอยู่ในเครื่องคุณตลอด เว็บดาวน์โหลดเฉพาะไฟล์แพตช์</div>
+    </header>
 
+    <section class="card" aria-labelledby="patch-title">
+      <div class="card-heading"><span class="step">01</span><h2 id="patch-title">เลือกแผ่นและไฟล์ต้นฉบับ</h2></div>
+      <div class="disc-switch" role="group" aria-label="เลือกแผ่น">
+        <button type="button" class="disc active" data-disc="1">DISC 1</button>
+        <button type="button" class="disc" data-disc="2">DISC 2</button>
+      </div>
+      <label class="file-pick">ไฟล์เกมต้นฉบับ (.bin)<input id="source" type="file" accept=".bin,application/octet-stream"><span id="source-name">เลือกไฟล์ BIN</span></label>
+      <p class="hint" id="expected"></p>
+      <details>
+        <summary>ใช้ไฟล์ BPS ที่ดาวน์โหลดไว้แล้ว</summary>
+        <label class="file-pick secondary">ไฟล์แพตช์ (.bps)<input id="local-patch" type="file" accept=".bps,application/octet-stream"><span id="patch-name">ไม่เลือก — ใช้แพตช์จากเว็บ</span></label>
+      </details>
+    </section>
+
+    <section class="card" aria-labelledby="run-title">
+      <div class="card-heading"><span class="step">02</span><h2 id="run-title">ตรวจและลงแพตช์</h2></div>
+      <p>ระบบจะตรวจขนาดและ CRC32 ของ BIN ต้นฉบับ จากนั้นอ่านแพตช์เป็นช่วง ๆ และเขียน BIN ใหม่ลงดิสก์</p>
+      <button id="start" class="primary" type="button" disabled>เริ่มแพตช์</button>
+      <div class="progress" aria-live="polite"><div id="status">กรุณาเลือกไฟล์ BIN</div><progress id="bar" max="100" value="0"></progress></div>
+      <div id="result" hidden><p>แพตช์เสร็จแล้ว ตรวจสอบ CRC32 ผ่าน</p><button id="cue" type="button">ดาวน์โหลดไฟล์ CUE</button><p class="hint">วาง CUE ไว้ในโฟลเดอร์เดียวกับ BIN ใหม่ แล้วเปิด CUE ใน DuckStation</p></div>
+    </section>
+
+    <footer>รองรับ BIN ต้นฉบับ Japan/Asia เท่านั้น · รุ่นทดลอง RC1 · แนะนำ Chrome หรือ Edge บนคอมพิวเตอร์</footer>
+  </main>
+</body>
+</html>

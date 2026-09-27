@@ -1,0 +1,43 @@
+{
+  "version": "Thai release candidate 1",
+  "discs": [
+    {
+      "disc": 1,
+      "source_size": 654846192,
+      "source_crc32": "0a01101d",
+      "target_size": 657158208,
+      "target_crc32": "c820ae91",
+      "patch_size": 402844702,
+      "patch_crc32": "f1abe90d",
+      "target_bin": "Chase the Express - Thai translation v13 Disc 1 cutscenes.bin",
+      "patch_parts": [
+        "./patches/disc1-00.bpsp",
+        "./patches/disc1-01.bpsp",
+        "./patches/disc1-02.bpsp",
+        "./patches/disc1-03.bpsp",
+        "./patches/disc1-04.bpsp",
+        "./patches/disc1-05.bpsp",
+        "./patches/disc1-06.bpsp"
+      ]
+    },
+    {
+      "disc": 2,
+      "source_size": 676484592,
+      "source_crc32": "044c6c58",
+      "target_size": 678796608,
+      "target_crc32": "92617334",
+      "patch_size": 424591313,
+      "patch_crc32": "937635f6",
+      "target_bin": "Chase the Express - Thai translation v14 Disc 2 cutscenes.bin",
+      "patch_parts": [
+        "./patches/disc2-00.bpsp",
+        "./patches/disc2-01.bpsp",
+        "./patches/disc2-02.bpsp",
+        "./patches/disc2-03.bpsp",
+        "./patches/disc2-04.bpsp",
+        "./patches/disc2-05.bpsp",
+        "./patches/disc2-06.bpsp"
+      ]
+    }
+  ]
+}
