@@ -1,83 +1,83 @@
 [
   {
     "disc": 1,
-    "patch_sha256": "5c305352d82b30f5e7be4f99682d01b9a1c4b55bc9e721a24436370467c39bae",
+    "patch_sha256": "18dc75b249c9f3b21f2b3bcc8150c6aa10ee1050d76d99b72ae31860d1e72059",
     "parts": [
       {
-        "file": "disc1-v19-00.bpsp",
+        "file": "disc1-v22-00.bpsp",
         "size": 67108864,
         "sha256": "72eeab9962945a76eae22858312d4bb5482928cd901b500927dc07810263bff2"
       },
       {
-        "file": "disc1-v19-01.bpsp",
+        "file": "disc1-v22-01.bpsp",
         "size": 67108864,
         "sha256": "15cc4edab1c7523acbf188c467054d16565d2a8ece7e2c6471d63ce94f888bcb"
       },
       {
-        "file": "disc1-v19-02.bpsp",
+        "file": "disc1-v22-02.bpsp",
         "size": 67108864,
         "sha256": "7e6b8630ccaa24ce19286174e6c8c5b12bff9e73daf7b3ac2bca279f2e9636ee"
       },
       {
-        "file": "disc1-v19-03.bpsp",
+        "file": "disc1-v22-03.bpsp",
         "size": 67108864,
         "sha256": "41d5fdd6cca7fecf5c8d22adf8110409775aae48ed53247a39f27e8abb4c0278"
       },
       {
-        "file": "disc1-v19-04.bpsp",
+        "file": "disc1-v22-04.bpsp",
         "size": 67108864,
         "sha256": "097407e7bd4355e34eeae631a0e25daf1505cad6f098629a0dc9021211478483"
       },
       {
-        "file": "disc1-v19-05.bpsp",
+        "file": "disc1-v22-05.bpsp",
         "size": 67108864,
-        "sha256": "32e850b1f89b86bfc1cb93e29a15b85bfeec1f8287433b4ac0e3d90dea9e6484"
+        "sha256": "98310e0afb6eca501d4269091a67f0352d62187dae9100b04d9479b21a50f60b"
       },
       {
-        "file": "disc1-v19-06.bpsp",
-        "size": 11763370,
-        "sha256": "ce2ee4c539cbf6100c5366cbeec96c1818ac7bc964325b19ae0aa58fbaf1ae9b"
+        "file": "disc1-v22-06.bpsp",
+        "size": 11765727,
+        "sha256": "6acd458cc16b0901d8431d0fd1fcc1528cef4dd0b8de06c7ddb20d81a4219a34"
       }
     ]
   },
   {
     "disc": 2,
-    "patch_sha256": "6282b7941150f389ab499893a748409e6d2f181f96150a350942292889612193",
+    "patch_sha256": "5ca535366bc27569e383a354ca17d3e1ad2ce2e56696381d7886c5000bd1ea98",
     "parts": [
       {
-        "file": "disc2-v19-00.bpsp",
+        "file": "disc2-v22-00.bpsp",
         "size": 67108864,
         "sha256": "fd240acae0c065468345be28d26d9814389d84f3e0745a8882051f6a5c4e00e4"
       },
       {
-        "file": "disc2-v19-01.bpsp",
+        "file": "disc2-v22-01.bpsp",
         "size": 67108864,
         "sha256": "9b4f994afa0812acb25aaacbafa44be0ad9c37861078c6616a2aded7ca2b8b63"
       },
       {
-        "file": "disc2-v19-02.bpsp",
+        "file": "disc2-v22-02.bpsp",
         "size": 67108864,
         "sha256": "c61a976291f8b526cfd719764ebaf7f11b90949541f7b5a1e8e2c7192e99094d"
       },
       {
-        "file": "disc2-v19-03.bpsp",
+        "file": "disc2-v22-03.bpsp",
         "size": 67108864,
         "sha256": "ec6d49b88af103b987bbd7f44ed82ae1d2410b32e96dbd8dfb1efc6dcc389b45"
       },
       {
-        "file": "disc2-v19-04.bpsp",
+        "file": "disc2-v22-04.bpsp",
         "size": 67108864,
         "sha256": "2da75da21e9c6451fa5fa7bb9e37f76544472360640aef5a37bd009563c85ef4"
       },
       {
-        "file": "disc2-v19-05.bpsp",
+        "file": "disc2-v22-05.bpsp",
         "size": 67108864,
         "sha256": "88ffc10a53f05d8469277c3df8329d40b33b788099bde557c87e665c16713f37"
       },
       {
-        "file": "disc2-v19-06.bpsp",
-        "size": 24252500,
-        "sha256": "3222d72d5f4c0d800f2ac5373e515c96f74d520da4528371123ade576e555d0c"
+        "file": "disc2-v22-06.bpsp",
+        "size": 24254857,
+        "sha256": "669195d5c84ff4630e851b15762ad2f12051ba00a5fb6b50aa6fe31e8aa8df9f"
       }
     ]
   }
