@@ -1,23 +1,23 @@
 {
-  "version": "Thai release candidate 2 (v15)",
+  "version": "Thai release candidate 3 (v19)",
   "discs": [
     {
       "disc": 1,
       "source_size": 654846192,
       "source_crc32": "0a01101d",
-      "target_size": 659472576,
-      "target_crc32": "21852beb",
-      "patch_size": 405159073,
-      "patch_crc32": "abf69859",
-      "target_bin": "Chase the Express - Thai translation v15 stairs fix (Disc 1).bin",
+      "target_size": 668730048,
+      "target_crc32": "ea21aa1e",
+      "patch_size": 414416554,
+      "patch_crc32": "396f31c6",
+      "target_bin": "Chase the Express - Thai translation v19 component font (Disc 1).bin",
       "patch_parts": [
-        "./patches/disc1-v15-00.bpsp",
-        "./patches/disc1-v15-01.bpsp",
-        "./patches/disc1-v15-02.bpsp",
-        "./patches/disc1-v15-03.bpsp",
-        "./patches/disc1-v15-04.bpsp",
-        "./patches/disc1-v15-05.bpsp",
-        "./patches/disc1-v15-06.bpsp"
+        "./patches/disc1-v19-00.bpsp",
+        "./patches/disc1-v19-01.bpsp",
+        "./patches/disc1-v19-02.bpsp",
+        "./patches/disc1-v19-03.bpsp",
+        "./patches/disc1-v19-04.bpsp",
+        "./patches/disc1-v19-05.bpsp",
+        "./patches/disc1-v19-06.bpsp"
       ]
     },
     {
@@ -25,18 +25,18 @@
       "source_size": 676484592,
       "source_crc32": "044c6c58",
       "target_size": 681110976,
-      "target_crc32": "791bbd5e",
+      "target_crc32": "cdb4dda7",
       "patch_size": 426905684,
-      "patch_crc32": "d5a55e31",
-      "target_bin": "Chase the Express - Thai translation v15 stairs fix (Disc 2).bin",
+      "patch_crc32": "de660312",
+      "target_bin": "Chase the Express - Thai translation v19 component font (Disc 2).bin",
       "patch_parts": [
-        "./patches/disc2-v15-00.bpsp",
-        "./patches/disc2-v15-01.bpsp",
-        "./patches/disc2-v15-02.bpsp",
-        "./patches/disc2-v15-03.bpsp",
-        "./patches/disc2-v15-04.bpsp",
-        "./patches/disc2-v15-05.bpsp",
-        "./patches/disc2-v15-06.bpsp"
+        "./patches/disc2-v19-00.bpsp",
+        "./patches/disc2-v19-01.bpsp",
+        "./patches/disc2-v19-02.bpsp",
+        "./patches/disc2-v19-03.bpsp",
+        "./patches/disc2-v19-04.bpsp",
+        "./patches/disc2-v19-05.bpsp",
+        "./patches/disc2-v19-06.bpsp"
       ]
     }
   ]
