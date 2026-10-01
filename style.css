@@ -1363,7 +1363,7 @@ footer p {
 }
 
 /* หน้าแรกแสดงเฉพาะ 6 เกมแรก */
-.game-grid .game-card:nth-child(n+7) {
+.home-page .game-grid .game-card:nth-child(n+7) {
     display: none;
 }
 
